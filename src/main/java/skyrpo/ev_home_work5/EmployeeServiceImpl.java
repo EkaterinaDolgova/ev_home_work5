@@ -2,7 +2,7 @@ package skyrpo.ev_home_work5;
 
 public class EmployeeServiceImpl implements EmployeeService {
 
-     static Employee [] employees =
+      Employee [] employees =
             {new Employee("Петров Петр Петрович", 1, 20000, "Первое имя", "Следующее имя"),
                     new Employee("Петров Петр Петрович", 1, 20000, "Первое имя", "Следующее имя"),
                     new Employee("Иванов Иван Иванович", 2, 30000, "Первое имя", "Следующее имя"),
@@ -10,7 +10,7 @@ public class EmployeeServiceImpl implements EmployeeService {
             };
 
     @Override
-    public static String getEmployee(Integer number){
+    public String getEmployee(Integer number){
         final Employee employee;
         employee = employees[number];
         final String EmployeeDescription = ""

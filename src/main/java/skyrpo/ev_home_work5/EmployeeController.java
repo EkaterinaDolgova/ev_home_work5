@@ -17,5 +17,9 @@ public class EmployeeController {
         return employeeService.getEmployee(number);
     }
 
+    @GetMapping(path = "/employee")
+    public String Employee_() {
+        return "dfedgfe";
+    }
 
 }
