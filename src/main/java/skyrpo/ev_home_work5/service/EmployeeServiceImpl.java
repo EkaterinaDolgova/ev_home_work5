@@ -50,7 +50,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     public String deleteArray(String firstname, String lastname) {
         for (int i = 0; i < employees.length; i++) {
             if (employees[i].getName().equals(firstname) || employees[i].getFamily().equals(lastname)) {
-                employees[i] = null;
+                Employee[] emp = new Employee[employees.length - 1];
+                System.arraycopy(employees, 0, emp, 0, employees.length - 1);
+                employees = emp;
                 return "Удален" + firstname;
             }
         }
